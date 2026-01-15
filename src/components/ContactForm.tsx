@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { submitContactForm } from "@/app/actions/contact";
 
 const services = [
   { value: "bioinformatics", label: "Bioinformatics" },
@@ -21,6 +20,9 @@ const industries = [
   { value: "other", label: "Other" },
 ];
 
+// Web3Forms access key - get yours free at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "";
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -38,15 +40,43 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-    
-    const result = await submitContactForm(formData);
-    
-    setIsSubmitting(false);
-    
-    if (result.success) {
-      setIsSubmitted(true);
-    } else {
-      setError(result.message);
+
+    // If no Web3Forms key, use mailto fallback
+    if (!WEB3FORMS_ACCESS_KEY) {
+      const subject = encodeURIComponent(`New Enquiry from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nOrganisation: ${formData.organisation || "N/A"}\nIndustry: ${formData.industry || "N/A"}\nService: ${formData.service || "N/A"}\n\nMessage:\n${formData.message}`
+      );
+      window.location.href = `mailto:bioaiguru@gmail.com?subject=${subject}&body=${body}`;
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Enquiry from ${formData.name}${formData.organisation ? ` (${formData.organisation})` : ""}`,
+          from_name: "BioAIguru Website",
+          ...formData,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again or email us directly at bioaiguru@gmail.com");
+      }
+    } catch {
+      setError("Something went wrong. Please try again or email us directly at bioaiguru@gmail.com");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 

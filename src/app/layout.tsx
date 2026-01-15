@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: "Bioinformatics, genomics, and data analysis services for pharma, healthcare, agriculture, and academic research across India.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "BioAIguru - Bioinformatics Services",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BioAIguru | Bioinformatics Services in India",
     description: "Bioinformatics, genomics, and data analysis services for pharma, healthcare, agriculture, and academic research across India.",
-    images: ["/opengraph-image"],
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
