@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Custom dark mode variant - class-based toggling */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ============================================
+   BioAIguru Custom Theme
+   Primary: Yale Blue (professional, scientific)
+   Accent: Magenta Bloom (biotech, modern)
+   ============================================ */
+
+@theme {
+  /* Yale Blue - Primary */
+  --color-primary-50: #edf2f8;
+  --color-primary-100: #dbe4f0;
+  --color-primary-200: #b7c9e1;
+  --color-primary-300: #92aed3;
+  --color-primary-400: #6e93c4;
+  --color-primary-500: #4a78b5;
+  --color-primary-600: #3b6091;
+  --color-primary-700: #2c486d;
+  --color-primary-800: #1e3048;
+  --color-primary-900: #0f1824;
+  --color-primary-950: #0a1119;
+
+  /* Magenta Bloom - Accent */
+  --color-accent-50: #fde7ed;
+  --color-accent-100: #fbd0dc;
+  --color-accent-200: #f8a0b9;
+  --color-accent-300: #f47196;
+  --color-accent-400: #f14173;
+  --color-accent-500: #ed1250;
+  --color-accent-600: #be0e40;
+  --color-accent-700: #8e0b30;
+  --color-accent-800: #5f0720;
+  --color-accent-900: #2f0410;
+  --color-accent-950: #21020b;
+
+  /* Neutral colors for text and backgrounds */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* Font family */
+  --font-display: var(--font-display);
+}
+
+/* Base styles */
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-primary-900);
+  --muted: var(--color-neutral-600);
+  --border: var(--color-primary-100);
+}
+
+.dark {
+  --background: var(--color-primary-950);
+  --foreground: var(--color-neutral-100);
+  --muted: var(--color-neutral-400);
+  --border: var(--color-primary-800);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base body styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Display font for headings */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-900);
+}
+
+.dark ::selection {
+  background-color: var(--color-primary-700);
+  color: var(--color-primary-100);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-400);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-primary-900);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-primary-700);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-600);
+}
