@@ -6,8 +6,8 @@ const isGhPages = process.env.DEPLOY_TARGET === "gh-pages";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   output: isGhPages ? "export" : undefined,
-  basePath: isGhPages ? "/bioaiguru" : "",
-  assetPrefix: isGhPages ? "/bioaiguru/" : "",
+  basePath: "",
+  assetPrefix: "",
   images: {
     unoptimized: isGhPages,
   },
