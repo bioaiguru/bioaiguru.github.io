@@ -1,0 +1,209 @@
+{
+    "id": "bulk-rna",
+    "title": "Bulk RNA-seq Analysis",
+    "tagline": "Comprehensive transcriptome profiling",
+    "description": "End-to-end bulk RNA-seq analysis from raw sequencing reads to biological insights, differential expression, and pathway analysis.",
+    "hero": {
+        "title": "Bulk RNA-seq Analysis",
+        "subtitle": "Uncover genome-wide gene expression patterns and regulatory networks",
+        "stats": [
+            {
+                "value": "500+",
+                "label": "Projects Completed"
+            },
+            {
+                "value": "20,000+",
+                "label": "Genes Analyzed"
+            },
+            {
+                "value": "98%",
+                "label": "Client Satisfaction"
+            }
+        ]
+    },
+    "overview": {
+        "whatWeDo": "We provide comprehensive bulk RNA-seq analysis services from quality control of raw reads to identification of differentially expressed genes, pathway enrichment analysis, and publication-ready visualizations. Our expert team ensures rigorous statistical analysis and biological interpretation.",
+        "whenToUse": [
+            "Comparing gene expression between experimental conditions",
+            "Identifying disease biomarkers",
+            "Understanding drug response mechanisms",
+            "Studying developmental processes",
+            "Investigating environmental effects on gene expression"
+        ],
+        "deliverables": [
+            "Quality control reports (FastQC, MultiQC)",
+            "Gene expression matrix (counts and TPM)",
+            "Differential expression results with statistical metrics",
+            "Functional enrichment analysis (GO, KEGG, Reactome)",
+            "Publication-quality figures (PCA, heatmaps, volcano plots)",
+            "Comprehensive analysis report with biological interpretation"
+        ]
+    },
+    "workflow": {
+        "steps": [
+            {
+                "number": 1,
+                "title": "Quality Control",
+                "description": "Assess read quality, adapter content, and sequence duplication levels. Remove low-quality reads and trim adapters.",
+                "tools": [
+                    "FastQC",
+                    "MultiQC",
+                    "Trim Galore",
+                    "Cutadapt"
+                ],
+                "duration": "1-2 days",
+                "outputs": [
+                    "QC reports",
+                    "Cleaned FASTQ files"
+                ]
+            },
+            {
+                "number": 2,
+                "title": "Read Alignment",
+                "description": "Map reads to reference genome or transcriptome using splice-aware aligners.",
+                "tools": [
+                    "STAR",
+                    "HISAT2",
+                    "Salmon (quasi-mapping)"
+                ],
+                "duration": "1-2 days",
+                "outputs": [
+                    "BAM files",
+                    "Alignment statistics"
+                ]
+            },
+            {
+                "number": 3,
+                "title": "Quantification",
+                "description": "Count reads mapped to genes/transcripts and generate expression matrix.",
+                "tools": [
+                    "featureCounts",
+                    "HTSeq",
+                    "Salmon",
+                    "RSEM"
+                ],
+                "duration": "1 day",
+                "outputs": [
+                    "Raw counts matrix",
+                    "TPM/FPKM values"
+                ]
+            },
+            {
+                "number": 4,
+                "title": "Differential Expression",
+                "description": "Identify genes with significant expression changes between conditions using statistical models.",
+                "tools": [
+                    "DESeq2",
+                    "edgeR",
+                    "limma-voom"
+                ],
+                "duration": "2-3 days",
+                "outputs": [
+                    "DE gene lists",
+                    "Statistical metrics (logFC, p-value, FDR)"
+                ]
+            },
+            {
+                "number": 5,
+                "title": "Functional Analysis",
+                "description": "Interpret biological meaning through pathway and gene ontology enrichment.",
+                "tools": [
+                    "clusterProfiler",
+                    "GSEA",
+                    "Enrichr",
+                    "DAVID"
+                ],
+                "duration": "2-3 days",
+                "outputs": [
+                    "Enriched pathways",
+                    "GO terms",
+                    "Network diagrams"
+                ]
+            },
+            {
+                "number": 6,
+                "title": "Visualization & Reporting",
+                "description": "Generate publication-ready figures and comprehensive analysis reports.",
+                "tools": [
+                    "ggplot2",
+                    "ComplexHeatmap",
+                    "Plotly",
+                    "R Markdown"
+                ],
+                "duration": "2-3 days",
+                "outputs": [
+                    "Figures (PCA, volcano, heatmaps)",
+                    "Final report"
+                ]
+            }
+        ]
+    },
+    "bestPractices": [
+        {
+            "title": "Biological Replicates",
+            "description": "Use at least 3 biological replicates per condition for robust statistical power."
+        },
+        {
+            "title": "Sequencing Depth",
+            "description": "Aim for 20-30 million reads per sample for standard mRNA profiling."
+        },
+        {
+            "title": "Batch Effects",
+            "description": "Randomize sample processing and include batch information in the experimental design."
+        },
+        {
+            "title": "Gene Filtering",
+            "description": "Remove lowly expressed genes (< 10 reads across all samples) to improve statistical power."
+        },
+        {
+            "title": "Multiple Testing Correction",
+            "description": "Use FDR (Benjamini-Hochberg) to control for false discoveries in differential expression."
+        }
+    ],
+    "useCases": [
+        {
+            "title": "Drug Response Profiling",
+            "description": "Identify transcriptomic signatures of drug-treated cells to understand mechanisms of action.",
+            "sector": "pharma",
+            "tags": [
+                "Drug discovery",
+                "Mechanism of action"
+            ]
+        },
+        {
+            "title": "Disease Biomarker Discovery",
+            "description": "Compare diseased vs. healthy tissue to identify diagnostic or prognostic markers.",
+            "sector": "healthcare",
+            "tags": [
+                "Biomarkers",
+                "Diagnostics"
+            ]
+        },
+        {
+            "title": "Crop Stress Response",
+            "description": "Understand plant gene expression under various environmental stresses.",
+            "sector": "agriculture",
+            "tags": [
+                "Stress response",
+                "Crop improvement"
+            ]
+        }
+    ],
+    "pricing": {
+        "model": "project-based",
+        "note": "Pricing varies based on number of samples, sequencing depth, and analysis complexity. Contact us for a detailed quote.",
+        "estimatedTimeline": "2-4 weeks from data receipt to final report"
+    },
+    "cta": {
+        "title": "Ready to Analyze Your RNA-seq Data?",
+        "description": "Get in touch with our team to discuss your transcriptomics project. We offer free consultations to help design the optimal analysis strategy.",
+        "primaryButton": {
+            "text": "Request a Quote",
+            "link": "/contact"
+        },
+        "secondaryButton": {
+            "text": "View Example Reports",
+            "link": "/resources/reports"
+        }
+    }
+}

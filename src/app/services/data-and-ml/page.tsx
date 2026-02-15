@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Data Analysis Services",
-  description: "Statistical analysis, machine learning, differential expression, and predictive modelling for biological data. Expert data science from BioAIguru.",
-  keywords: ["data analysis", "statistical analysis", "machine learning", "differential expression", "biological data", "R", "Python"],
+  title: "Data and ML Services",
+  description: "Advanced data analysis, machine learning, and statistical modelling for biological datasets. Expert AI/ML services from BioAIguru.",
+  keywords: ["data analysis", "machine learning", "ML", "AI", "statistics", "biological data", "predictive modeling"],
   openGraph: {
-    title: "Data Analysis Services | BioAIguru",
-    description: "Statistical modelling and machine learning for biological data analysis.",
-    url: "/services/data-analysis",
+    title: "Data and ML Services | BioAIguru",
+    description: "Unlock patterns in your biological data with advanced statistical and machine learning approaches.",
+    url: "/services/data-and-ml",
   },
 };
 
@@ -73,22 +73,22 @@ export default function DataAnalysisPage() {
           <div className="flex items-center gap-2 text-emerald-200 text-sm mb-6">
             <Link href="/services" className="hover:text-white transition-colors">Services</Link>
             <span>/</span>
-            <span className="text-white">Data Analysis</span>
+            <span className="text-white">Data and ML</span>
           </div>
-          
+
           <div className="max-w-3xl">
             <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center mb-8">
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
               </svg>
             </div>
-            
+
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-tight mb-6">
-              Data Analysis Services
+              Data and ML Services
             </h1>
             <p className="text-xl text-emerald-100 leading-relaxed">
-              Patterns in complexity. Statistical modelling and machine learning to extract 
-              meaningful insights from your biological datasets.
+              Patterns in complexity. We apply advanced statistical methods and machine learning
+              algorithms to interpret your data and predict biological outcomes.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function DataAnalysisPage() {
                 We Analyse All Omics Data
               </h2>
               <p className="text-lg text-primary-600 dark:text-primary-300 leading-relaxed">
-                Our team has deep experience with diverse biological data types, from 
+                Our team has deep experience with diverse biological data types, from
                 traditional microarrays to cutting-edge single-cell technologies.
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function DataAnalysisPage() {
               Let Us Analyse Your Data
             </h2>
             <p className="text-lg text-emerald-100 leading-relaxed mb-10">
-              Whether you need differential expression analysis, machine learning models, 
+              Whether you need differential expression analysis, machine learning models,
               or custom statistical pipelines, we can help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

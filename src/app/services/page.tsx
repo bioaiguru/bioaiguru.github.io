@@ -13,17 +13,17 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    id: "bioinformatics",
-    title: "Bioinformatics",
-    tagline: "From sequences to insights",
-    description: "Comprehensive sequence analysis, genome annotation, and biological data interpretation to help you understand your molecular data.",
+    id: "omics",
+    title: "Omics",
+    tagline: "Genomics, Transcriptomics & Proteomics",
+    description: "Comprehensive analysis for genomics, transcriptomics, proteomics, and multi-omics data to uncover biological insights.",
     features: [
-      "Sequence alignment & analysis",
-      "Genome annotation",
-      "Homology searches",
-      "Phylogenetic analysis",
-      "Protein structure prediction",
-      "Functional annotation",
+      "Genome Assembly",
+      "Differential Expression",
+      "Variant Calling",
+      "Pathway Enrichment",
+      "Single-cell Analysis",
+      "Metagenomics",
     ],
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -33,61 +33,61 @@ const services = [
     color: "from-blue-500 to-primary-600",
   },
   {
-    id: "data-analysis",
-    title: "Data Analysis",
-    tagline: "Patterns in complexity",
-    description: "Statistical modelling and machine learning techniques to extract meaningful patterns from complex biological datasets.",
+    id: "data-and-ml",
+    title: "Data and ML",
+    tagline: "AI models & Statistical analysis",
+    description: "Advanced machine learning models and statistical frameworks to interpret complex biological datasets and predict outcomes.",
     features: [
-      "Statistical analysis",
-      "Machine learning models",
-      "Differential expression",
-      "Clustering & classification",
-      "Dimensionality reduction",
-      "Predictive modelling",
+      "Predictive Modeling",
+      "Deep Learning",
+      "Survival Analysis",
+      "Clustering & PCA",
+      "Biomarker Discovery",
+      "Image Analysis",
     ],
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
     color: "from-emerald-500 to-teal-600",
   },
   {
-    id: "genomics",
-    title: "Genomics",
-    tagline: "Decoding genomes",
-    description: "End-to-end genome sequencing analysis, from raw reads to annotated assemblies and variant interpretation.",
+    id: "resource-development",
+    title: "Resource Development",
+    tagline: "Webservers, Databases & Tools",
+    description: "Custom development of biological databases, web servers, and analysis tools to make your data accessible and actionable.",
     features: [
-      "Genome assembly",
-      "Variant calling (SNPs, indels)",
-      "Structural variant detection",
-      "Copy number analysis",
-      "Comparative genomics",
-      "Population genetics",
+      "Custom Databases",
+      "Web Portals",
+      "Analysis Pipelines",
+      "Cloud Deployment",
+      "API Development",
+      "Data Visualization Tools",
     ],
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
       </svg>
     ),
     color: "from-purple-500 to-indigo-600",
   },
   {
     id: "consulting",
-    title: "Consulting",
-    tagline: "Expert guidance",
-    description: "Strategic advice on research design, data strategy, and computational infrastructure for your projects.",
+    title: "Consultation",
+    tagline: "Experiment design & Grant writing",
+    description: "Expert scientific consulting to guide your research strategy, experimental design, and funding applications.",
     features: [
-      "Experimental design",
-      "Pipeline architecture",
-      "Tool selection",
-      "Training & workshops",
-      "Grant writing support",
-      "Publication assistance",
+      "Experimental Design",
+      "Grant Proposal Support",
+      "Manuscript Preparation",
+      "Bioinformatics Training",
+      "Project Feasibility",
+      "Technology Selection",
     ],
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
       </svg>
     ),
     color: "from-amber-500 to-orange-600",
@@ -126,7 +126,7 @@ export default function ServicesPage() {
           <svg className="w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 600">
             <defs>
               <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1"/>
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
@@ -142,7 +142,7 @@ export default function ServicesPage() {
               Comprehensive Bioinformatics Solutions
             </h1>
             <p className="text-xl text-primary-100 leading-relaxed">
-              From raw sequencing data to publication-ready results, we provide end-to-end 
+              From raw sequencing data to publication-ready results, we provide end-to-end
               computational biology services tailored to your research needs.
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
               >
                 {/* Background gradient on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
-                
+
                 {/* Number decoration */}
                 <div className="absolute top-6 right-6 text-7xl font-display font-bold text-primary-100 dark:text-primary-800 group-hover:text-primary-200 dark:group-hover:text-primary-700 transition-colors">
                   {String(index + 1).padStart(2, "0")}
@@ -241,7 +241,7 @@ export default function ServicesPage() {
                 {index < process.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-1/2 w-full h-px bg-gradient-to-r from-primary-600 to-primary-700" />
                 )}
-                
+
                 <div className="relative text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 text-white text-xl font-bold mb-6">
                     {item.step}
@@ -271,7 +271,7 @@ export default function ServicesPage() {
                 All Major Sequencing Platforms
               </h2>
               <p className="text-lg text-primary-600 dark:text-primary-300 leading-relaxed mb-8">
-                We have experience with data from all major sequencing platforms and can 
+                We have experience with data from all major sequencing platforms and can
                 handle diverse data types and formats.
               </p>
             </div>
@@ -310,7 +310,7 @@ export default function ServicesPage() {
               Not Sure Which Service You Need?
             </h2>
             <p className="text-lg text-primary-600 dark:text-primary-300 leading-relaxed mb-10">
-              Tell us about your data and research goals. We will help you figure out 
+              Tell us about your data and research goals. We will help you figure out
               the best approach for your project.
             </p>
             <Link

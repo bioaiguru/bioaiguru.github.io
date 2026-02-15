@@ -5,43 +5,43 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const services = [
-  { 
-    name: "Bioinformatics", 
-    href: "/services/bioinformatics", 
-    description: "Sequence analysis & annotation",
+  {
+    name: "Omics",
+    href: "/services/omics",
+    description: "Genomics, Transcriptomics & Proteomics",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
       </svg>
     )
   },
-  { 
-    name: "Data Analysis", 
-    href: "/services/data-analysis", 
-    description: "Statistical & ML solutions",
+  {
+    name: "Data and ML",
+    href: "/services/data-and-ml",
+    description: "AI models & Statistical analysis",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     )
   },
-  { 
-    name: "Genomics", 
-    href: "/services/genomics", 
-    description: "Genome sequencing & assembly",
+  {
+    name: "Resource Development",
+    href: "/services/resource-development",
+    description: "Webservers, Databases & Tools",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-2.25-1.313M21 7.5v2.25m0-2.25l-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3l2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75l2.25-1.313M12 21.75V19.5m0 2.25l-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
       </svg>
     )
   },
-  { 
-    name: "Consulting", 
-    href: "/services/consulting", 
-    description: "Expert guidance & strategy",
+  {
+    name: "Consultation",
+    href: "/services/consulting",
+    description: "Experiment design & Grant writing",
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
       </svg>
     )
   },
@@ -60,7 +60,7 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
+
   const servicesTimeout = useRef<NodeJS.Timeout | null>(null);
   const solutionsTimeout = useRef<NodeJS.Timeout | null>(null);
 
@@ -97,16 +97,15 @@ export default function Header() {
   };
 
   return (
-    <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? "bg-white/95 dark:bg-primary-950/95 backdrop-blur-md shadow-sm shadow-primary-200/50 dark:shadow-primary-900/50" 
+    <header
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
+          ? "bg-white/95 dark:bg-primary-950/95 backdrop-blur-md shadow-sm shadow-primary-200/50 dark:shadow-primary-900/50"
           : "bg-transparent"
-      }`}
+        }`}
     >
       {/* Top accent line */}
       <div className="h-0.5 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-500" />
-      
+
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between py-4">
           {/* Logo */}
@@ -122,7 +121,7 @@ export default function Header() {
               {/* Accent dot */}
               <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-accent-500 rounded-full border-2 border-white dark:border-primary-950" />
             </div>
-            
+
             {/* Logo text */}
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-primary-800 dark:text-white leading-none">
@@ -163,12 +162,11 @@ export default function Header() {
                 </svg>
                 <span className="absolute inset-x-4 -bottom-px h-px bg-accent-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </button>
-              
+
               {/* Services Mega Menu */}
-              <div 
-                className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${
-                  servicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
-                }`}
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${servicesOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+                  }`}
               >
                 <div className="w-[480px] rounded-2xl bg-white dark:bg-primary-900 shadow-2xl shadow-primary-900/10 dark:shadow-black/30 border border-primary-100 dark:border-primary-800 overflow-hidden">
                   {/* Header */}
@@ -177,7 +175,7 @@ export default function Header() {
                       Our Services
                     </h3>
                   </div>
-                  
+
                   {/* Services Grid */}
                   <div className="p-3 grid grid-cols-2 gap-1">
                     {services.map((item) => (
@@ -200,11 +198,11 @@ export default function Header() {
                       </Link>
                     ))}
                   </div>
-                  
+
                   {/* Footer */}
                   <div className="px-6 py-4 bg-primary-50 dark:bg-primary-800/50 border-t border-primary-100 dark:border-primary-700">
-                    <Link 
-                      href="/services" 
+                    <Link
+                      href="/services"
                       className="inline-flex items-center text-sm font-medium text-accent-600 dark:text-accent-400 hover:text-accent-700 dark:hover:text-accent-300 transition-colors"
                     >
                       View all services
@@ -236,12 +234,11 @@ export default function Header() {
                 </svg>
                 <span className="absolute inset-x-4 -bottom-px h-px bg-accent-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
               </button>
-              
+
               {/* Solutions Dropdown */}
-              <div 
-                className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${
-                  solutionsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
-                }`}
+              <div
+                className={`absolute left-1/2 -translate-x-1/2 top-full pt-4 transition-all duration-200 ${solutionsOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+                  }`}
               >
                 <div className="w-72 rounded-2xl bg-white dark:bg-primary-900 shadow-2xl shadow-primary-900/10 dark:shadow-black/30 border border-primary-100 dark:border-primary-800 overflow-hidden">
                   {/* Header */}
@@ -250,7 +247,7 @@ export default function Header() {
                       Industry Solutions
                     </h3>
                   </div>
-                  
+
                   {/* Solutions List */}
                   <div className="p-2">
                     {solutions.map((item, index) => (
@@ -267,11 +264,11 @@ export default function Header() {
                             {item.description}
                           </span>
                         </div>
-                        <svg 
-                          className="w-4 h-4 text-primary-300 dark:text-primary-600 group-hover/item:text-accent-500 group-hover/item:translate-x-0.5 transition-all" 
-                          fill="none" 
-                          viewBox="0 0 24 24" 
-                          stroke="currentColor" 
+                        <svg
+                          className="w-4 h-4 text-primary-300 dark:text-primary-600 group-hover/item:text-accent-500 group-hover/item:translate-x-0.5 transition-all"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
                           strokeWidth={2}
                         >
                           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -311,7 +308,7 @@ export default function Header() {
           {/* Right side actions */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            
+
             {/* CTA Button */}
             <Link
               href="/contact"
@@ -340,10 +337,9 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <div 
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+            }`}
         >
           <div className="py-4 border-t border-primary-100 dark:border-primary-800">
             <div className="space-y-1">

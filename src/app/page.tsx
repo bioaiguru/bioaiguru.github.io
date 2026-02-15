@@ -148,17 +148,16 @@ export default function Home() {
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white leading-[1.15] mb-6">
-                Transform Your
-                <span className="block text-accent-300 mt-2">Biological Data</span>
-                Into Discovery
+                Bioinformatics Made
+                <span className="block text-accent-300 mt-2">Simple & Accessible</span>
               </h1>
 
               <p className="text-lg lg:text-xl text-primary-100 max-w-xl mb-10 leading-relaxed">
-                We help researchers and life sciences companies unlock insights from complex 
-                biological data through expert analysis and AI-driven solutions.
+                Skip the technical hurdles and stay focused on your research. We deliver reliable, 
+                high-quality analysis and dedicated support to help you reach your next milestone without the headache.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-10">
                 <Link
                   href="/contact"
                   className="inline-flex items-center px-6 py-3.5 text-base font-semibold text-primary-700 bg-white hover:bg-primary-50 rounded-lg transition-all hover:shadow-lg"
@@ -174,6 +173,14 @@ export default function Home() {
                 >
                   Explore Services
                 </Link>
+              </div>
+
+              <div className="flex items-center gap-3 text-primary-200 font-medium tracking-wide text-sm sm:text-base">
+                <span>Understand</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-400 opacity-60" />
+                <span>Analyse</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-400 opacity-60" />
+                <span>Deliver</span>
               </div>
             </div>
 

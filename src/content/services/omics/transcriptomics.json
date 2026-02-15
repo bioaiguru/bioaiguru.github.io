@@ -1,0 +1,112 @@
+{
+    "id": "transcriptomics",
+    "title": "Transcriptomics Services",
+    "tagline": "From reads to biological insights",
+    "description": "Comprehensive transcriptome analysis services covering bulk RNA-seq, single-cell RNA-seq, spatial transcriptomics, and small RNA profiling.",
+    "hero": {
+        "title": "Transcriptomics Services",
+        "subtitle": "Decode gene expression patterns with state-of-the-art RNA sequencing analysis",
+        "backgroundPattern": "rna-strands"
+    },
+    "services": [
+        {
+            "id": "bulk-rna",
+            "name": "Bulk RNA-seq",
+            "slug": "bulk-rna",
+            "icon": "chart-bar",
+            "description": "Comprehensive transcriptome profiling to identify differentially expressed genes and pathways.",
+            "features": [
+                "Differential expression analysis",
+                "Pathway enrichment",
+                "Gene ontology analysis",
+                "Custom visualizations"
+            ],
+            "solutionsSectors": [
+                "pharma",
+                "academia",
+                "biotech-startups",
+                "agriculture"
+            ],
+            "useCases": [
+                "Drug target discovery",
+                "Disease mechanism studies",
+                "Biomarker identification"
+            ]
+        },
+        {
+            "id": "single-cell",
+            "name": "Single-cell RNA-seq",
+            "slug": "single-cell",
+            "icon": "dots",
+            "description": "Cell-type specific expression profiling to understand cellular heterogeneity and rare cell populations.",
+            "features": [
+                "Cell type identification",
+                "Trajectory analysis",
+                "Cluster annotation",
+                "Integration analysis"
+            ],
+            "solutionsSectors": [
+                "pharma",
+                "academia",
+                "healthcare"
+            ],
+            "useCases": [
+                "Tumor microenvironment",
+                "Development studies",
+                "Immune profiling"
+            ]
+        },
+        {
+            "id": "spatial",
+            "name": "Spatial Transcriptomics",
+            "slug": "spatial",
+            "icon": "map",
+            "description": "Spatially-resolved gene expression to map tissue architecture and cellular neighborhoods.",
+            "features": [
+                "Spatial clustering",
+                "Niche identification",
+                "Spatial patterns",
+                "3D reconstruction"
+            ],
+            "solutionsSectors": [
+                "pharma",
+                "academia",
+                "healthcare"
+            ],
+            "useCases": [
+                "Tissue organization",
+                "Disease progression mapping",
+                "Cell-cell interactions"
+            ]
+        },
+        {
+            "id": "small-rna",
+            "name": "Small RNA-seq",
+            "slug": "small-rna",
+            "icon": "molecule",
+            "description": "microRNA and other small RNA profiling for regulatory network analysis.",
+            "features": [
+                "miRNA identification",
+                "Target prediction",
+                "Novel miRNA discovery",
+                "Differential expression"
+            ],
+            "solutionsSectors": [
+                "pharma",
+                "academia",
+                "biotech-startups"
+            ],
+            "useCases": [
+                "Biomarker discovery",
+                "Regulatory networks",
+                "Therapeutic targets"
+            ]
+        }
+    ],
+    "whyChooseUs": [
+        "Expert analysis by trained bioinformaticians",
+        "Publication-ready figures and reports",
+        "Flexible analysis pipelines",
+        "Rapid turnaround times"
+    ]
+}
